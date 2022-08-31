@@ -43,7 +43,7 @@ export const Filter = () => {
 
   return (
     <div className="filter">
-      <div className="search">
+      <div id="search">
         <h2>Filters</h2>
         <button>Reset</button>
         <label>Location</label>
@@ -83,7 +83,7 @@ export const Filter = () => {
       >
         Nearby gym
       </button> */}
-      <div className="gymdata">
+      <div id="gymdata">
         {gym.map((e, i) => (
           <div className="item" key={i}>
             <div>
@@ -101,6 +101,9 @@ export const Filter = () => {
                 <br />
                 {e.duration_text} away | {e.distance_text}
               </p>
+            </div>
+            <div>
+              <p>Rs 3000 for 3 Months</p>
             </div>
           </div>
         ))}
