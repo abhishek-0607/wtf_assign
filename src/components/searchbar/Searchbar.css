@@ -1,0 +1,32 @@
+.search {
+  margin-top: 40px;
+  border: 1px solid rgb(21, 0, 255);
+  display: flex;
+  width: 100%;
+  border-radius: 4px;
+  justify-content: center;
+}
+
+.search > .input {
+  background: 0 0;
+  border: 1px solid rgb(163, 52, 52);
+
+  padding: 8px 0 8px 12px;
+  margin-right: 10px;
+  width: 70%;
+  outline: 0;
+  box-shadow: none;
+}
+.search > .icon {
+  width: 30px;
+  border: 1px solid yellow;
+  background-color: red;
+  margin: 0 10px;
+}
+.search > .clear {
+  padding: 16px 25px;
+  width: 30px;
+  border: 1px solid yellow;
+  background-color: red;
+  margin: 0 10px;
+}

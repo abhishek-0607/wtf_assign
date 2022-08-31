@@ -6,7 +6,7 @@ export const Navbar = () => {
     <div className="navbar">
       <div className="navbar-container">
         <div className="logo-container">
-          <h1 className="logo">MoviesAdda</h1>
+          <h1 className="logo">WTF</h1>
         </div>
         {/* <div id="searchbar">
           <input id="movie" type="text" />

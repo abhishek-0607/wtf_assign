@@ -20,7 +20,7 @@
 } */
 .menu-container {
   border: 1px solid red;
-  flex: 1;
+  flex: 2;
 }
 .menu-list {
   display: flex;
@@ -35,4 +35,5 @@
 }
 .last {
   margin-right: 50px;
+  background-color: red;
 }

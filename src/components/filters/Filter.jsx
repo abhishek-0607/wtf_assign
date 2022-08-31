@@ -3,6 +3,7 @@ import "./Filter.css";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { Rating } from "react-simple-star-rating";
 
 export const Filter = () => {
   const [place, setPlace] = useState("");
@@ -12,7 +13,7 @@ export const Filter = () => {
 
   useEffect(() => {
     getByLocation();
-  }, [status]);
+  }, []);
 
   const handleChange = (e) => {
     setStatus(true);
@@ -41,47 +42,71 @@ export const Filter = () => {
   };
 
   return (
-    <div>
-      <h2>Filters</h2>
-      <button>Reset</button>
-      <label>Location</label>
-      <input type="text" placeholder="Enter the location" />
-      <label>Price</label>
-      <input type="text" placeholder="Min" />
-      <input type="text" placeholder="Max" />
-      <label>Cities</label>
-      <select name="" id="" value={place} onChange={handleChange}>
-        <option value="">Select city</option>
-        <option value="new_delhi">New Delhi</option>
-        <option value="ghaziabad"> Ghaziabad</option>
-        <option value="noida">Noida</option>
-        <option value="delhi">Delhi</option>
-      </select>
-
-      {status ? (
-        <select name="" id="" onChange={handleChange}>
-          {address.map((e, i) => (
-            <option key={i} value={e.address1}>
-              {e.address1}
-            </option>
-          ))}
+    <div className="filter">
+      <div className="search">
+        <h2>Filters</h2>
+        <button>Reset</button>
+        <label>Location</label>
+        <input type="text" placeholder="Enter the location" />
+        <label>Price</label>
+        <div className="minmax">
+          <input type="text" className="max" placeholder="Min" />
+          <input type="text" className="max" placeholder="Max" />
+        </div>
+        <label>Cities</label>
+        <select name="" id="" value={place} onChange={handleChange}>
+          <option value="">Select city</option>
+          <option value="new_delhi">New Delhi</option>
+          <option value="ghaziabad"> Ghaziabad</option>
+          <option value="noida">Noida</option>
+          <option value="delhi">Delhi</option>
         </select>
-      ) : null}
 
-      <button
+        {status ? (
+          <>
+            <label>Locations</label>
+            <select name="" id="" onChange={handleChange}>
+              {address.map((e, i) => (
+                <option key={i} value={e.address1}>
+                  {e.address1}
+                </option>
+              ))}
+            </select>
+          </>
+        ) : null}
+      </div>
+
+      {/* <button
         onClick={() => {
           getByLocation();
         }}
       >
         Nearby gym
-      </button>
-      <div>
+      </button> */}
+      <div className="gymdata">
         {gym.map((e, i) => (
-          <div>
-            {e.gym_name},{e.address1},{e.address2},{e.city},{e.pin}
+          <div className="item" key={i}>
+            <div>
+              <h4>{e.gym_name}</h4>
+              <Rating
+                initialValue={e.rating}
+                size={15}
+                fillColor={`#ffffff`}
+                emptyColor={`#000000`} /* Available Props */
+              />
+              <p>
+                {/* {e.rating} */}
+                <br />
+                {e.address1}, {e.address2}, {e.city}, Pincode:- {e.pin}
+                <br />
+                {e.duration_text} away | {e.distance_text}
+              </p>
+            </div>
           </div>
         ))}
       </div>
     </div>
   );
 };
+
+// WTF: Naresh Sir Gym,Sector 8,C Block,Noida,201301
