@@ -2,6 +2,8 @@
   width: 100%;
   height: 70px;
   background-color: black;
+  position: fixed;
+  z-index: 1;
 }
 .navbar-container {
   display: flex;

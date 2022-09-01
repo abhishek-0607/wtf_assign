@@ -10,8 +10,7 @@ export const Searchbar = () => {
         className="input"
         type="text"
         value=""
-        name="EMAIL"
-        placeholder="Enter your email address"
+        placeholder="Enter gym name here"
       ></input>
       <div id="icon">
         <FontAwesomeIcon id="ic" icon={faLocationDot} size="lg" />

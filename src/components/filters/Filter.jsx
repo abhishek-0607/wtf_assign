@@ -49,13 +49,14 @@ export const Filter = () => {
         <h2>Filters</h2>
         <button>Reset</button>
         <label>Location</label>
-        <input type="text" placeholder="Enter the location" />
+        <input type="text" className="input" placeholder="Enter the location" />
         <label>Price</label>
         <div className="minmax">
           <input type="text" className="max" placeholder="Min" />
           <input type="text" className="max" placeholder="Max" />
         </div>
         <label>Cities</label>
+
         <select name="" id="" value={place} onChange={handleChange}>
           <option value="">Select city</option>
           <option value="new_delhi">New Delhi</option>
@@ -94,7 +95,7 @@ export const Filter = () => {
                 initialValue={e.rating}
                 size={15}
                 fillColor={`#ffffff`}
-                emptyColor={`#000000`} /* Available Props */
+                emptyColor={`#4b4b4b`} /* Available Props */
               />
               <p>
                 {/* {e.rating} */}

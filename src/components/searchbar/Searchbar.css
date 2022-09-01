@@ -18,6 +18,8 @@
   width: 70%;
   outline: 0;
   box-shadow: none;
+  font-weight: 400;
+  font-size: 15px;
 }
 #icon {
   width: 30px;

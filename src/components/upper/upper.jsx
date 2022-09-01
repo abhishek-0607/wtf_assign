@@ -16,20 +16,28 @@ export const Upper = () => {
         </div>
         <div className="child2">
           <div className="child2_boxes">
-            <h3>icon</h3>
-            <h3>Text</h3>
+            <p>
+              Modern <br />
+              Equipments
+            </p>
           </div>
           <div className="child2_boxes">
-            <h3>icon</h3>
-            <h3>Text</h3>
+            <p>
+              Skilled <br />
+              Trainer
+            </p>
           </div>
           <div className="child2_boxes">
-            <h3>icon</h3>
-            <h3>Text</h3>
+            <p>
+              Top class <br />
+              Ambiance
+            </p>
           </div>
           <div className="child2_boxes">
-            <h3>icon</h3>
-            <h3>Text</h3>
+            <p>
+              Sanitized <br />
+              GYMS
+            </p>
           </div>
         </div>
       </div>

@@ -1,8 +1,10 @@
 .filter {
-  border: 1px solid green;
   display: flex;
   width: 100%;
   flex-direction: row;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .filter > #search {
   flex: 1;
@@ -10,46 +12,42 @@
   flex-direction: column;
   flex-wrap: wrap;
   text-align: left;
-  border: 1px solid red;
+
   position: relative;
 }
 .filter > #search > h2 {
   margin: 4%;
 }
 .filter > #search > button {
-  width: 50px;
+  width: 60px;
   position: absolute;
   top: 4%;
   right: 4%;
-  background-color: red;
+
   color: white;
   border: none;
   padding: 5px 10px;
   border-radius: 3px;
-  background: #250000;
-  background: -moz-linear-gradient(
-    -45deg,
-    #250000 0%,
-    #cb0000 99%,
-    #dd7676 100%
-  );
-  background: -webkit-linear-gradient(
-    -45deg,
-    #250000 0%,
-    #cb0000 99%,
-    #dd7676 100%
-  );
-  background: linear-gradient(135deg, #250000 0%, #cb0000 99%, #dd7676 100%);
+  background-color: rgb(129, 0, 0);
+  font-weight: 400;
+  font-size: 15px;
 }
 .filter > #search > label {
   font-weight: 700;
   margin-bottom: 10px;
   margin-left: 10px;
 }
-.filter > #search > input {
+.filter > #search > .input {
   width: 250px;
   padding: 16px 0 16px 16px;
   margin: 0 10px 10px 10px;
+  border: 2px solid rgb(181, 181, 181);
+  background: rgb(77, 77, 77);
+
+  border-radius: 5px;
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
 }
 .filter > #search > .minmax {
   border: 1px rgb(21, 0, 255);
@@ -60,31 +58,54 @@
   flex: 1;
   margin: 0 10px;
   padding: 16px;
+  border: 2px solid rgb(181, 181, 181);
+  background: rgb(77, 77, 77);
+
+  border-radius: 5px;
+  color: white;
 }
-.filter > #search > select {
+/* #selectbox {
   width: 250px;
+} */
+.filter > #search > select {
+  width: 270px;
   padding: 16px 0 16px 16px;
   margin-bottom: 10px;
   margin-left: 10px;
+  border: 2px solid rgb(181, 181, 181);
+  background: rgb(77, 77, 77);
+
+  border-radius: 5px;
+  color: white;
 }
 
 .filter > #gymdata {
   flex: 7;
-  border: 1px solid rgb(21, 0, 255);
+
   width: 500px;
-  height: 500px;
+  height: 700px;
   overflow-x: hidden;
   overflow-y: auto;
 }
 .filter > #gymdata > .item {
   margin: 50px;
-  border: 1px solid rgb(182, 182, 182);
+
+  border-radius: 10px;
+  background: #161616;
+  background: -moz-linear-gradient(left, #161616 0%, #000000 47%, #161616 100%);
+  background: -webkit-linear-gradient(
+    left,
+    #161616 0%,
+    #000000 47%,
+    #161616 100%
+  );
+  background: linear-gradient(to right, #161616 0%, #000000 47%, #161616 100%);
 }
 #top {
   margin-bottom: 70px;
-  border: 1px solid blue;
+
   position: relative;
-  border: 1px solid red;
+
   width: 65%;
   left: 35%;
   text-align: left;
@@ -92,12 +113,23 @@
 
 #bottom {
   position: relative;
-  border: 1px solid red;
+
   width: 65%;
   left: 35%;
   text-align: left;
+  color: rgb(227, 186, 0);
+  font-weight: 700;
 }
 
 #bottom span {
   margin-left: 50%;
+}
+#bottom button {
+  background-color: rgb(129, 0, 0);
+  margin: 5px 10px;
+  padding: 15px 25px;
+  border-radius: 7px;
+  border: none;
+  margin-right: 0;
+  color: rgb(255, 255, 255);
 }

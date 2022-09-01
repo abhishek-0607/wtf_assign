@@ -9,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <img id="img" src="./posterGym.png" alt="" width="100%" />
       <Searchbar />
       <Filter />
       <Upper />
