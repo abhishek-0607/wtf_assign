@@ -25,6 +25,21 @@
   color: white;
   border: none;
   padding: 5px 10px;
+  border-radius: 3px;
+  background: #250000;
+  background: -moz-linear-gradient(
+    -45deg,
+    #250000 0%,
+    #cb0000 99%,
+    #dd7676 100%
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    #250000 0%,
+    #cb0000 99%,
+    #dd7676 100%
+  );
+  background: linear-gradient(135deg, #250000 0%, #cb0000 99%, #dd7676 100%);
 }
 .filter > #search > label {
   font-weight: 700;
@@ -57,8 +72,32 @@
   flex: 7;
   border: 1px solid rgb(21, 0, 255);
   width: 500px;
+  height: 500px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .filter > #gymdata > .item {
   margin: 50px;
-  border: 1px solid black;
+  border: 1px solid rgb(182, 182, 182);
+}
+#top {
+  margin-bottom: 70px;
+  border: 1px solid blue;
+  position: relative;
+  border: 1px solid red;
+  width: 65%;
+  left: 35%;
+  text-align: left;
+}
+
+#bottom {
+  position: relative;
+  border: 1px solid red;
+  width: 65%;
+  left: 35%;
+  text-align: left;
+}
+
+#bottom span {
+  margin-left: 50%;
 }

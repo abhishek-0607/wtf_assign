@@ -13,10 +13,10 @@ export const Searchbar = () => {
         name="EMAIL"
         placeholder="Enter your email address"
       ></input>
-      <div className="icon">
-        <FontAwesomeIcon id="" icon={faLocationDot} size="lg" />
+      <div id="icon">
+        <FontAwesomeIcon id="ic" icon={faLocationDot} size="lg" />
       </div>
-      <div className="clear">clear</div>
+      <div id="clear">clear</div>
     </div>
   );
 };

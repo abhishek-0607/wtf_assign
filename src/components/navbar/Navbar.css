@@ -13,13 +13,11 @@
 .logo-container {
   flex: 1;
   text-align: left;
-  border: 1px solid red;
 }
 /* #searchbar {
   flex: 2;
 } */
 .menu-container {
-  border: 1px solid red;
   flex: 2;
 }
 .menu-list {
@@ -34,6 +32,24 @@
   margin-left: 50px;
 }
 .last {
-  margin-right: 50px;
-  background-color: red;
+  margin-right: 40px;
+
+  padding: 3px 10px;
+  border-radius: 3px;
+  font-weight: 200;
+
+  background: #250000;
+  background: -moz-linear-gradient(
+    -45deg,
+    #250000 0%,
+    #cb0000 99%,
+    #dd7676 100%
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    #250000 0%,
+    #cb0000 99%,
+    #dd7676 100%
+  );
+  background: linear-gradient(135deg, #250000 0%, #cb0000 99%, #dd7676 100%);
 }

@@ -4,6 +4,8 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Rating } from "react-simple-star-rating";
+import { faIndianRupeeSign } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Filter = () => {
   const [place, setPlace] = useState("");
@@ -86,7 +88,7 @@ export const Filter = () => {
       <div id="gymdata">
         {gym.map((e, i) => (
           <div className="item" key={i}>
-            <div>
+            <div id="top">
               <h4>{e.gym_name}</h4>
               <Rating
                 initialValue={e.rating}
@@ -102,8 +104,13 @@ export const Filter = () => {
                 {e.duration_text} away | {e.distance_text}
               </p>
             </div>
-            <div>
-              <p>Rs 3000 for 3 Months</p>
+            <div id="bottom">
+              <p>
+                <FontAwesomeIcon icon={faIndianRupeeSign} /> 3000 for 3 Months
+                <span>
+                  <button>Book Now</button>
+                </span>
+              </p>
             </div>
           </div>
         ))}

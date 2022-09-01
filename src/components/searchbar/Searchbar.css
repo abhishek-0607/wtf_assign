@@ -1,32 +1,38 @@
 .search {
   margin-top: 40px;
-  border: 1px solid rgb(21, 0, 255);
+  border: 3px solid rgb(255, 255, 255);
   display: flex;
-  width: 100%;
-  border-radius: 4px;
+  width: 90%;
+  border-radius: 7px;
   justify-content: center;
+  height: 50px;
+  margin-left: 50px;
+  padding: 3px;
 }
 
 .input {
   background: 0 0;
-  border: 1px solid rgb(163, 52, 52);
-
+  border: none;
   padding: 8px 0 8px 12px;
-  margin-right: 10px;
+  margin-right: 150px;
   width: 70%;
   outline: 0;
   box-shadow: none;
 }
-.icon {
+#icon {
   width: 30px;
-  border: 1px solid yellow;
-  background-color: red;
-  margin: 10px;
+  background-color: rgb(129, 0, 0);
+  margin: 5px 10px;
+  padding: 0 8px;
+  border-radius: 7px;
 }
-.clear {
-  padding: 16px 25px;
-  width: 30px;
-  border: 1px solid yellow;
-  background-color: red;
-  margin: 0 10px;
+#ic {
+  padding-top: 6px;
+}
+#clear {
+  background-color: rgb(129, 0, 0);
+  margin: 5px 10px;
+  padding: 5px 15px;
+  border-radius: 7px;
+  margin-right: 0;
 }
