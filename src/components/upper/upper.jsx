@@ -7,11 +7,13 @@ export const Upper = () => {
       <div className="parent_container">
         <div className="child1">
           <div className="child1_heading">
-            <h1>WTF Fitness Experience?</h1>
+            <p>WTF Fitness Experience?</p>
           </div>
           <div className="child1_other">
             <div className="child1_other_box"></div>
-            <h3>@ your regular gym cost</h3>
+            <h3>
+              @ your regular <br /> gym cost?
+            </h3>
           </div>
         </div>
         <div className="child2">
