@@ -4,15 +4,15 @@
   background-color: black;
   color: white;
 }
-.child1 {
+.parent_container_footer > .child1 {
   height: 300px;
   /*border: 1px solid green;*/
   width: 40%;
   margin-left: 10%;
 }
-.child2 {
+.parent_container_footer > .child2 {
   height: 300px;
-  /*border: 1px solid gray;*/
+  border: 1px solid rgb(35, 16, 144);
   width: 60%;
   display: flex;
 }
