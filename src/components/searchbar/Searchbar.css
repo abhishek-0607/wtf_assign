@@ -29,12 +29,12 @@
   border-radius: 7px;
 }
 #ic {
-  padding-top: 6px;
+  padding-top: 10px;
 }
 #clear {
   background-color: rgb(129, 0, 0);
   margin: 5px 10px;
-  padding: 5px 15px;
+  padding: 8px 15px;
   border-radius: 7px;
   margin-right: 0;
 }

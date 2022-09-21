@@ -15,7 +15,7 @@ export const Searchbar = () => {
       <div id="icon">
         <FontAwesomeIcon id="ic" icon={faLocationDot} size="lg" />
       </div>
-      <div id="clear">clear</div>
+      <div id="clear">Clear</div>
     </div>
   );
 };
