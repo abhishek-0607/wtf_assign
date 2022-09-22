@@ -17,16 +17,19 @@
 }
 .filter > #search > h2 {
   margin: 4%;
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 .filter > #search > button {
-  width: 60px;
+  /* width: 60px; */
   position: absolute;
-  top: 4%;
-  right: 4%;
+  top: 3%;
+  right: 3%;
 
   color: white;
   border: none;
-  padding: 5px 10px;
+  padding: 6px 15px;
   border-radius: 3px;
   background-color: rgb(129, 0, 0);
   font-weight: 400;
@@ -67,27 +70,43 @@
 /* #selectbox {
   width: 250px;
 } */
-.filter > #search > select {
+.filter > #search > #city {
   width: 270px;
   padding: 16px 0 16px 16px;
   margin-bottom: 10px;
   margin-left: 10px;
+
   border: 2px solid rgb(181, 181, 181);
   background: rgb(77, 77, 77);
 
   border-radius: 5px;
   color: white;
 }
+.filter > #search > .locations {
+  border: 2px solid rgb(181, 181, 181);
+  background: rgb(77, 77, 77);
 
+  border-radius: 5px;
+
+  width: 265px;
+
+  margin-left: 10px;
+  font-size: 14px;
+}
+.filter > #search > .locations > .address {
+  padding: 5px 0;
+  padding-left: 10px;
+}
 .filter > #gymdata {
   flex: 7;
 
   width: 500px;
-  height: 700px;
+  height: 930px;
   margin-right: 60px;
   overflow-x: hidden;
   overflow-y: auto;
   /* border: 1px solid white; */
+  margin-bottom: 50px;
 }
 
 #gymdata::-webkit-scrollbar {
@@ -101,9 +120,11 @@
   border-radius: 8px;
 }
 .filter > #gymdata > .item {
+  height: 240px;
+  position: relative;
   margin: 50px 0 50px 50px;
-
-  border-radius: 10px;
+  /* border: 1px solid red; */
+  border-radius: 8px;
   background: #161616;
   background: -moz-linear-gradient(left, #161616 0%, #000000 47%, #161616 100%);
   background: -webkit-linear-gradient(
@@ -116,33 +137,47 @@
 }
 #top {
   margin-bottom: 70px;
+  /* border: 1px solid red; */
 
   position: relative;
 
   width: 65%;
   left: 35%;
+  top: 4%;
   text-align: left;
 }
 
 #bottom {
   position: relative;
+  /* border: 1px solid red; */
 
   width: 65%;
   left: 35%;
   text-align: left;
   color: rgb(227, 186, 0);
   font-weight: 700;
+  bottom: -15%;
 }
 
-#bottom span {
+/* #bottom span {
   margin-left: 50%;
+  border: 1px solid red;
+} */
+#bottom p {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 #bottom button {
   background-color: rgb(129, 0, 0);
   margin: 5px 10px;
-  padding: 15px 25px;
-  border-radius: 7px;
+  padding: 12px 18px;
+  border-radius: 3px;
   border: none;
   margin-right: 0;
   color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 0;
+  right: 3%;
+  font-size: 16px;
 }
