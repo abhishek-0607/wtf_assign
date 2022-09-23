@@ -15,11 +15,12 @@ export const Filter = () => {
 
   useEffect(() => {
     getByLocation();
-  }, []);
+  }, [place]);
 
   const handleChange = (e) => {
     setStatus(true);
     setPlace(e.target.value);
+
     getByAddress();
   };
   const getByAddress = () => {
@@ -38,7 +39,7 @@ export const Filter = () => {
         return res.json();
       })
       .then((res) => {
-        console.log(res.data);
+        console.log("location", res.data);
         setGym(res.data);
       });
   };
@@ -47,7 +48,17 @@ export const Filter = () => {
     <div className="filter">
       <div id="search">
         <h2>Filters</h2>
-        <button>Reset</button>
+        {status && (
+          <button
+            onClick={() => {
+              setStatus(false);
+
+              getByLocation();
+            }}
+          >
+            Reset
+          </button>
+        )}
         <label>Location</label>
         <input type="text" className="input" placeholder="Enter the location" />
         <label>Price</label>
@@ -57,24 +68,52 @@ export const Filter = () => {
         </div>
         <label>Cities</label>
 
-        <select name="" id="" value={place} onChange={handleChange}>
+        <select name="" id="city" value={place} onChange={handleChange}>
           <option value="">Select city</option>
-          <option value="new_delhi">New Delhi</option>
-          <option value="ghaziabad"> Ghaziabad</option>
-          <option value="noida">Noida</option>
-          <option value="delhi">Delhi</option>
+          <option value="New Delhi">New Delhi</option>
+          <option value="Ghaziabad"> Ghaziabad</option>
+          <option value="Greater Noida">Greater Noida</option>
+          <option value="Noida">Noida</option>
+          <option value="Delhi">Delhi</option>
         </select>
 
         {status ? (
           <>
             <label>Locations</label>
-            <select name="" id="" onChange={handleChange}>
+            {/* <select name="" className="locations" onChange={handleChange}>
               {address.map((e, i) => (
-                <option key={i} value={e.address1}>
+                <option className="locations" key={i} value={e.address1}>
                   {e.address1}
                 </option>
               ))}
-            </select>
+            </select> */}
+            <div className="locations">
+              {address.map((e, i) => (
+                <div
+                  onClick={() => {
+                    // setAddress(e.address1);
+                    console.log(e.address1);
+                    fetch(
+                      `https://devapi.wtfup.me/gym/nearestgym?lat=30&long=78`
+                    )
+                      .then((res) => {
+                        return res.json();
+                      })
+                      .then((res) => {
+                        console.log("location", res.data);
+                        setGym(
+                          res.data.filter((ele) => ele.address1 === e.address1)
+                        );
+                      });
+                  }}
+                  className="address"
+                  key={i}
+                  value={e.address1}
+                >
+                  {e.address1}
+                </div>
+              ))}
+            </div>
           </>
         ) : null}
       </div>
@@ -92,15 +131,14 @@ export const Filter = () => {
             <div id="top">
               <h4>{e.gym_name}</h4>
               <Rating
+                allowHover={false}
                 initialValue={e.rating}
                 size={15}
                 fillColor={`#ffffff`}
                 emptyColor={`#4b4b4b`} /* Available Props */
               />
               <p>
-                {/* {e.rating} */}
-                <br />
-                {e.address1}, {e.address2}, {e.city}, Pincode:- {e.pin}
+                {e.address1}, {e.address2}, {e.city}
                 <br />
                 {e.duration_text} away | {e.distance_text}
               </p>
@@ -108,10 +146,8 @@ export const Filter = () => {
             <div id="bottom">
               <p>
                 <FontAwesomeIcon icon={faIndianRupeeSign} /> 3000 for 3 Months
-                <span>
-                  <button>Book Now</button>
-                </span>
               </p>
+              <button>Book Now</button>
             </div>
           </div>
         ))}
